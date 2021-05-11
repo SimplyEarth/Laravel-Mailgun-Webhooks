@@ -35,6 +35,7 @@ class CreateMailgunEventsTable extends Migration
             $table->string('msg_subject')->nullable();
             $table->string('msg_id')->nullable();
             $table->integer('msg_code')->nullable();
+            $table->integer('msg_description')->nullable();
             $table->integer('attempt_number')->default(1);
             $table->boolean('attachments')->default(0);
             $table->timestamps();
