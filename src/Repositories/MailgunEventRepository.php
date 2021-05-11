@@ -134,6 +134,7 @@ class MailgunEventRepository
             'msg_subject' => $this->getHeaders('subject', $data),
             'msg_id' => $this->getHeaders('msg_id', $data),
             'msg_code' => $data['event-data']['delivery-status']['code'] ?? null,
+            'msg_message' => $data['event-data']['delivery-status']['description'] ?? null,
             'attempt_number' => $data['event-data']['delivery-status']['attempt-no'] ?? 1,
             'attachments' => $this->areAttachmentsIncluded($data),
             'user_id' => $userId,

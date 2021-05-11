@@ -42,6 +42,7 @@ class MailgunEvent extends Model
         'msg_subject',
         'msg_id',
         'msg_code',
+        'msg_message',
         'attempt_number',
         'attachments'
     ];
